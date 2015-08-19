@@ -19,3 +19,18 @@ module.exports = (robot) ->
 
   robot.respond /DIE$/i, (msg) ->
     msg.send "Goodbye, cruel world."
+
+  robot.hear /(([^:\s!]+):\s)(can (I ask )?you (help|something))/i, (msg) ->
+    msg.send "Please avoid directing questions at specific people, ask the room instead."
+
+  robot.hear /(.+)?(is( there)?|are|can)?(you|((some|any)(one|body))) (awake|alive|help( me)?|home|(in|out )?t?here)(\?)?$/i, (msg) ->
+    msg.send "Probably! What do you want to know?"
+
+  robot.hear /^(?:([^:\s!]+):\s)?(?:(?:(?:do|have)? you )|(?:does|has)?\s?anyone )?(?:got|have)(?: (time|a minute))( to help)?\??/i, (msg) ->
+    user = msg.match[1]
+    type = msg.match[2]
+
+    if type is "time"
+      msg.send "So much universe, and so little time..."
+    else
+      msg.send "There is always time for another last minute"

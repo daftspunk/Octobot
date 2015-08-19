@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set up the environment
-export HUBOT_IRC_ROOMS="#october"
+export HUBOT_IRC_ROOMS="#october #octoshop"
 export HUBOT_IRC_SERVER="irc.freenode.net"
 
 # Fire up nodejs
