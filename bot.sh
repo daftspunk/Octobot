@@ -3,6 +3,7 @@
 # Set up the environment
 export HUBOT_IRC_ROOMS="#october #octoshop"
 export HUBOT_IRC_SERVER="irc.freenode.net"
+export HUBOT_YOUTUBE_KEY="AIzaSyBkmR8syzNIGNwQVGtLFC4wLNdNmljLiFw"
 
 # Fire up nodejs
 #. /opt/nvm/nvm.sh

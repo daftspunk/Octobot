@@ -8,6 +8,7 @@
 #   Add helpful triggers when you think of them!
 
 iconFontUrl = "http://daftspunk.github.io/Font-Autumn/"
+pasteUrl = "http://kopy.io"
 
 triggers =
   # Question Assistance
