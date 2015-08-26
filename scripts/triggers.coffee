@@ -52,8 +52,9 @@ triggers =
   '!magic'        : "http://www.reactiongifs.com/r/mgc.gif"
   '!mindblown'    : "http://www.reactiongifs.com/wp-content/uploads/2011/09/mind_blown.gif"
   '!troll'        : "http://25.media.tumblr.com/tumblr_lxgcxtBVcB1qh01r8o1_500.gif"
-  '!pew'          : "http://img.deadalushd.com/pew.jpg"
+  '!pew'          : "https://img.aebian.org/pew.jpg"
   '!doit'         : "https://www.youtube.com/watch?v=nuHfVn_cfHU"
+  '!trustnobody'  : "https://img.aebian.org/Duck_Dog.jpg"
 
 module.exports = (robot) ->
   robot.hear /(([^:\s!]+)[:\s]+)?(!\w+)(.*)/i, (msg) ->
