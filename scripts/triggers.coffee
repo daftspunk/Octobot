@@ -55,7 +55,7 @@ triggers =
   '!pew'          : "https://img.aebian.org/pew.jpg"
   '!doit'         : "https://www.youtube.com/watch?v=nuHfVn_cfHU"
   '!trustnobody'  : "https://img.aebian.org/Duck_Dog.jpg"
-
+  '!twig'  : "https://i.imgur.com/JGbJK7g.gif"
 module.exports = (robot) ->
   robot.hear /(([^:\s!]+)[:\s]+)?(!\w+)(.*)/i, (msg) ->
     user          = msg.match[2]
