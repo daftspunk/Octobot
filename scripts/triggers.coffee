@@ -7,7 +7,7 @@
 # Notes:
 #   Add helpful triggers when you think of them!
 
-iconFontUrl = "http://daftspunk.github.io/Font-Autumn/"
+iconFontUrl = "http://octobercms.com/docs/ui/icon"
 pasteUrl = "http://kopy.io"
 
 triggers =
