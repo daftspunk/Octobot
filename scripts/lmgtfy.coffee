@@ -12,8 +12,8 @@
 #
 
 module.exports = (robot) ->
-   robot.respond /lmgtfy( me)? \s?(?:@(\w*))? (.*)/i, (msg) ->
+   robot.respond /lmgtfy?\s?(?:@(\w*))? (.*)/i, (msg) ->
      link = ""
      link += "#{msg.match[1]}: " if msg.match[1]
      link += "http://lmgtfy.com/?q=#{escape(msg.match[2])}"
-        msg.send msg.message.user.name + ":Take this:" link
+        msg.send msg.message.user.name + link
