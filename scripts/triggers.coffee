@@ -17,10 +17,10 @@ triggers =
   '!explain'      : "Explain your business goals, such as what website feature you're making, instead of the technical problem you're facing. We can give you much better answers this way."
   '!help'         : "Before asking for help, use http://kopy.io to provide us the information we need to help you - October build, expected/actual behavior, and all relevant code. Paste the link here when done. Thanks!"
   '!helpme'       : "Before asking for help, use http://kopy.io to provide us the information we need to help you - October build, expected/actual behavior, and all relevant code. Paste the link here when done. Thanks!"
-  '!paste'        : "You may paste your code at http://kopy.io"
+  '!paste'        : "You may paste your code at http://kopy.io or https://gist.github.com"
   '!dontspam'     : "Please don't paste your code here. Instead, use http://kopy.io"
   '!failpaste'    : "Please don't paste your code directly to the room. Instead, use #{pasteUrl}"
-  '!pb'           : "Please avoid using pastebin.com as it is slow and forces others to look at ads. Please use http://kopy.io - Thanks!"
+  '!pb'           : "Please avoid using pastebin.com as it is slow and forces others to look at ads. Please use http://kopy.io or https://gist.github.com - Thanks!"
   '!rules'        : "You may review our room rules at http://octobercms.com/help/support/chat-rules"
 
   # Helpers
@@ -49,13 +49,13 @@ triggers =
   '!goal'         : "GOOOOOOOOOOOOOOOOOOOOOOAAAAAAAAAAAAAAAAALLLLLLLLLL!!!!!!!"
   '!success'      : "http://i.imgur.com/t11sbfh.jpg"
   '!unstoppable'  : "I am unstoppable!!! http://i.imgur.com/ALHS4Za.png"
-  '!magic'        : "http://www.reactiongifs.com/r/mgc.gif"
+  '!magic'        : "http://i.imgur.com/2DyorCH.gif"
   '!mindblown'    : "http://www.reactiongifs.com/wp-content/uploads/2011/09/mind_blown.gif"
   '!troll'        : "http://25.media.tumblr.com/tumblr_lxgcxtBVcB1qh01r8o1_500.gif"
   '!pew'          : "https://img.aebian.org/pew.jpg"
   '!doit'         : "https://www.youtube.com/watch?v=nuHfVn_cfHU"
   '!trustnobody'  : "https://img.aebian.org/Duck_Dog.jpg"
-
+  '!twig'  : "https://i.imgur.com/JGbJK7g.gif"
 module.exports = (robot) ->
   robot.hear /(([^:\s!]+)[:\s]+)?(!\w+)(.*)/i, (msg) ->
     user          = msg.match[2]
