@@ -37,7 +37,7 @@ triggers =
 
   # Fun
   '!no'           : "NOOOOOOOOO! http://www.youtube.com/watch?v=umDr0mPuyQc"
-  '!yep'          : "https://www.youtube.com/watch?v=qMxH7JLVdhc"
+  '!yep'          : "https://www.youtube.com/watch?v=ZZ5LpwO-An4"
   '!xy'           : "It's difficult to discuss a solution without first understanding the problem. Please, explain the problem itself and not the solution that you have in mind. For more info on presenting your problem see !help. Thanks! Also see http://mywiki.wooledge.org/XyProblem"
   '!drama'        : "I just can't take it anymore...."
   '!beta'         : "If you're updating from Beta to October RC, make sure you follow the steps in http://octobercms.com/beta to avoid common issues. This is due to necessary changes to the October core to make things more awesome."
@@ -53,7 +53,7 @@ triggers =
   '!mindblown'    : "http://www.reactiongifs.com/wp-content/uploads/2011/09/mind_blown.gif"
   '!troll'        : "http://25.media.tumblr.com/tumblr_lxgcxtBVcB1qh01r8o1_500.gif"
   '!pew'          : "https://img.aebian.org/pew.jpg"
-  '!doit'         : "https://www.youtube.com/watch?v=nuHfVn_cfHU"
+  '!doit'         : "https://www.youtube.com/watch?v=UhRXn2NRiWI"
   '!trustnobody'  : "https://img.aebian.org/Duck_Dog.jpg"
 
 module.exports = (robot) ->
