@@ -33,7 +33,7 @@ triggers =
   '!wysiwyg'      : "What you see is what you get"
   '!massassign'   : "Getting a MassAssignmentException? Find out how to protect your input at: http://wiki.laravel.io/FAQ_(Laravel_4)#MassAssignmentException"
   '!docscontrib'  : "Want to contribute to the documentation? Awesome! Fork and submit a pull request at https://github.com/octobercms/docs"
-  '!whoisoctobot'  : "Hello! The October team created me to help you! You can find my code at https://github.com/daftspunk/Octobot"
+  '!whoisoctobot' : "Hello! The October team created me to help you! You can find my code at https://github.com/daftspunk/Octobot"
 
   # Fun
   '!no'           : "NOOOOOOOOO! http://www.youtube.com/watch?v=umDr0mPuyQc"
@@ -55,7 +55,7 @@ triggers =
   '!pew'          : "https://img.aebian.org/pew.jpg"
   '!doit'         : "https://www.youtube.com/watch?v=UhRXn2NRiWI"
   '!trustnobody'  : "https://img.aebian.org/Duck_Dog.jpg"
-  '!twig'  : "https://i.imgur.com/JGbJK7g.gif"
+  '!twig'         : "https://i.imgur.com/JGbJK7g.gif"
 module.exports = (robot) ->
   robot.hear /(([^:\s!]+)[:\s]+)?(!\w+)(.*)/i, (msg) ->
     user          = msg.match[2]
