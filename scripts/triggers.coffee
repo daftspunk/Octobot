@@ -8,6 +8,7 @@
 #   Add helpful triggers when you think of them!
 
 iconFontUrl = "http://octobercms.com/docs/ui/icon"
+changelogUrl = "http://octobercms.com/changelog"
 pasteUrl = "http://kopy.io"
 
 triggers =
@@ -29,6 +30,7 @@ triggers =
   '!font'         : "#{iconFontUrl}"
   '!logs'         : "You can view the channel logs at https://botbot.me/freenode/october/"
   '!icons'        : "#{iconFontUrl}"
+  '!changelog'    : "#{changelogUrl}"
   '!welcome'      : "Hello, I'm Octobot, the OctoberCMS IRC Bot!  Welcome to October :).  If you have any questions, type !help to see how to best ask for assistance.  If you need to paste code, check !paste for more info.  Thanks!"
   '!wysiwyg'      : "What you see is what you get"
   '!massassign'   : "Getting a MassAssignmentException? Find out how to protect your input at: http://wiki.laravel.io/FAQ_(Laravel_4)#MassAssignmentException"
