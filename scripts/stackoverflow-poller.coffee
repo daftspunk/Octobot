@@ -7,7 +7,7 @@
 
 Poller = require '../support/poller'
 
-POLL_INTERVAL    = 1000 * 60 * 10 # 10 minute interval to start with
+POLL_INTERVAL    = 1000 * 60 * 15 # 15 minute interval to start with
 ANNOUNCE_ROOMS   = []
 
 do =>
@@ -32,7 +32,7 @@ class SOPoller
     @recentIds = []
 
   pollForNewThreads: ->
-    @poller.start (threads) => @newThreadsCallback.call(this, threads)
+    @poller.start (res) => @newThreadsCallback.call(this, res.items)
 
   stop: ->
     @poller.stop()

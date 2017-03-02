@@ -24,6 +24,7 @@ class Poller
         body
       ).catch((err) ->
         console.log "Failed reaching endpoint with poller", err || null
+        console.log err.stack
        # callback.call(this, err) if callback?
       )
 
