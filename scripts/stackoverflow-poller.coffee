@@ -7,7 +7,7 @@
 
 Poller = require '../support/poller'
 
-POLL_INTERVAL    = 1000 * 60 * 15 # 15 minute interval to start with
+POLL_INTERVAL    = 1000 * 60 * 10 # 10 minute interval to start with
 ANNOUNCE_ROOMS   = []
 
 do =>
@@ -23,11 +23,12 @@ class SOPoller
   constructor: (@robot, @poster) ->
     @poster  ||= new ThreadPoster(@robot)
     @poller    = new Poller(@robot.http(HOST_URL+API_URI).query(
-      site:   "stackoverflow"
-      order:  "desc"
-      sort:   "activity"
-      tagged: "octobercms"
-      filter: "default"
+      pagesize: 3
+      site:     "stackoverflow"
+      order:    "desc"
+      sort:     "activity"
+      tagged:   "octobercms"
+      filter:   "default"
     ), POLL_INTERVAL)
     @recentIds = []
 
@@ -44,7 +45,7 @@ class SOPoller
   newThreadsCallback: (threads) ->
     newThreads = threads.filter (thread) => @threadIsNew(thread)
     if newThreads.length > 0
-      @poster.postNewThreads(newThreads.slice(0, 3))
+      @poster.postNewThreads(newThreads)
     else
       console.log "No new posts from fetch at ", new Date()
 
