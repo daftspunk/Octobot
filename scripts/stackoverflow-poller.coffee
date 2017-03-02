@@ -7,8 +7,7 @@
 
 Poller = require '../support/poller'
 
-PROD_MODE        = process.env.NODE_ENV is 'production'
-POLL_INTERVAL    = 1000 * 60 * 30 # 15 minute interval to start with
+POLL_INTERVAL    = 1000 * 60 * 10 # 10 minute interval to start with
 ANNOUNCE_ROOMS   = []
 
 do =>
@@ -18,11 +17,12 @@ do =>
 # Polling system
 
 class SOPoller
-  HOST_URL = "http://api.stackexchange.com/2.2/questions/"
+  HOST_URL    = 'http://api.stackexchange.com'
+  API_URI     = '/2.2/questions'
 
   constructor: (@robot, @poster) ->
     @poster  ||= new ThreadPoster(@robot)
-    @poller    = new Poller(@robot.http(HOST_URL).query(
+    @poller    = new Poller(@robot.http(HOST_URL+API_URI).query(
       site:   "stackoverflow"
       order:  "desc"
       sort:   "activity"
@@ -43,12 +43,15 @@ class SOPoller
 
   newThreadsCallback: (threads) ->
     newThreads = threads.filter (thread) => @threadIsNew(thread)
-    @poster.postNewThreads(newThreads.slice(0, 3)) if newThreads.length > 0
+    if newThreads.length > 0
+      @poster.postNewThreads(newThreads.slice(0, 3))
+    else
+      console.log "No new posts from fetch at ", new Date()
 
   threadIsNew: (thread) ->
     return false unless @recentIds.indexOf(thread.question_id) is -1
 
-    @recentIds.shift() if @recentIds.length is 3
+    @recentIds.shift() if @recentIds.length is 5
     @recentIds.push(thread.question_id)
     true
 
@@ -82,5 +85,3 @@ module.exports = (robot) ->
   # Manual trigger
   robot.respond /check stackoverflow/i, (msg) ->
     poller.fetchNewThreads()
-
-

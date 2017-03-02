@@ -79,4 +79,3 @@ module.exports = (robot) ->
   # Manual trigger
   robot.respond /check the forums/i, (msg) ->
     poller.fetchNewThreads()
-
